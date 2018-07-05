@@ -4,7 +4,7 @@ This program calculates when Friday the 13th occurs. I was curious about this at
 
 ## How do I use it?
 
-Pretty easy. Just build it using the makefile (or not, do what you want, I'm not your mom.) The program can be called with a single year to calculate the months that have a Friday the 13th, or with two years to do that for every year in the range. It'll yell at you if you give it bogus arguments. (Or just try to turn your typoed command into an integer of some sort...)
+Pretty easy. Just build it using the makefile (or not -- I'm not your mom.) The program can be called with a single year to calculate the months that have a Friday the 13th, or with two years to do that for every year in the range. It'll yell at you if you give it bogus arguments. (Or just try to turn your typoed command into an integer of some sort...)
 
 ## This seems like a lot of code for something so simple.
 
