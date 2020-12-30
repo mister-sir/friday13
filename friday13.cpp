@@ -84,6 +84,17 @@ int main(int argc, char *argv[]){
 	return 0;
 }
 
+bool isLeapYear(int year){
+	if ( year % 4 == 0 ) {
+		if ( year % 100 == 0 ) {
+			if ( year % 400 == 0 ) { return true; }
+			else { return false; }
+		}
+		else { return true; }
+	}
+	else { return false; }
+}
+
 void printNameOfMonth(int monthNumber){
 	switch(monthNumber){
 		case 1:
@@ -205,7 +216,7 @@ int dayofYear(int date, int month, int year/*, bool gregorian = true*/){
 			break;
 	}
 
-	if( (year%4 == 0) && (year%400 != 0) ){ // If it's a leap year
+	if( isLeapYear(year) ){ // If it's a leap year
 		if(month > 2) dayofYear++; // Add one to dayofYear if later than February
 	}
 
@@ -247,7 +258,7 @@ int daysinMonth(int month, int year){
 			mdays = 31;
 			break;
 		case 2:
-			if( (year%4 == 0) && (year%400 != 0) ) mdays = 29;  // Leap year!
+			if( isLeapYear(year) ) mdays = 29;  // Leap year!
 			else mdays = 28;
 			break;
 		case 3:
